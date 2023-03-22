@@ -17,8 +17,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           
-      - name: 'setup browser-stack'
-        run: browserstack-sdk setup --username ${{ secrets.BROWSERSTACK_USERNAME }} --key ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+#      - name: 'setup browser-stack'
+#        run: browserstack-sdk setup --username ${{ secrets.BROWSERSTACK_USERNAME }} --key ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
 
       - name: execute py script # run main.py
         run: browserstack-sdk  python test.py
